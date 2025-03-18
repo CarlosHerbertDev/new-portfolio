@@ -1,18 +1,18 @@
 import { defineType, defineField } from "sanity";
 
-export const curriculum = defineType({
-    name:'home',
-    title:'Home',
+export const about = defineType({
+    name:'about',
+    title:'About',
     type:'document',
     fields: [
         defineField({
             name: 'title',
-            title: 'titulo inicial',
+            title: 'apresentação inicial',
             type: 'string'
         }),
         defineField({
-            name: 'description',
-            title: 'complemento do rirulo',
+            name: 'description_about',
+            title: 'fale sobre você',
             type: 'string'
         }),
         defineField({

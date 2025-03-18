@@ -1,8 +1,8 @@
 import { defineType, defineField } from "sanity";
 
-export const projects = defineType({
-    name:'home',
-    title:'Home',
+export const curriculum = defineType({
+    name:'Curriculum',
+    title:'Curriculum',
     type:'document',
     fields: [
         defineField({

@@ -14,6 +14,16 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "paths": {
+      "@api/*": ["api/*"],
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@contexts/*": ["contexts/*"],
+      "@mocks/*": ["mocks/*"],
+      "@interfaces/*": ["interfaces/*"],
+      "@styles/*": ["styles/*"],
+    },
 
     /* Linting */
     "strict": true,

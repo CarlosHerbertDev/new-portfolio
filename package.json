@@ -1,22 +1,21 @@
 {
   "name": "new-portfolio",
   "private": true,
-  "workspaces": [
-    "web",
-    "studio-new-portfolio"
-  ],
-
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"npm run dev -w web\" \"npm run dev -w studio-new-portfolio\""
+    "dev": "concurrently \"npm run dev -w web\" \"npm run dev -w new-portfolio\""
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "concurrently": "^9.1.2"
-    
   }
 }
