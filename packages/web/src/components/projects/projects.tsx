@@ -1,9 +1,27 @@
-import React from "react";
+import { getInfo } from "@api/service"
+import { Apidata } from "@interfaces/types";
+import { useEffect, useState } from "react"
 
-export const Projects: React.FC = () => {
-return(
+export function Project() {
+  const [projects, setProjects] = useState<Apidata[]>([]);
+  useEffect(() => {
+    const fecthdetails = async () => {
+      const response = await getInfo('curriculum')
+      
+          setProjects(response)
+      console.log(response)
+    }
+    fecthdetails()
+  }, [])
 
-    <h1>Projects</h1>
-    )
+  console.log(projects);
+  
 
+  return (
+    <>
+    <h1>App</h1>
+    </>
+  )
 }
+
+
