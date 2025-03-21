@@ -14,6 +14,7 @@ export default defineConfig({
       "@mocks": path.resolve(__dirname, "src/mocks"),
       "@interfaces": path.resolve(__dirname, "src/interfaces"),
       "@styles": path.resolve(__dirname, "src/styles"),
+      react: path.resolve('./node_modules/react'),
     },
   },
 });

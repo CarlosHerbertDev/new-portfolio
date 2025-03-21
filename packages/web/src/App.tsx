@@ -1,15 +1,11 @@
-import { Project } from "@components/projects/projects"
-
-
-
-
+import { AppRoutes } from "./pages/routes";
 
 function App() {
 
 
   return (
     <>
-    <Project />
+      <AppRoutes />
     </>
   )
 }

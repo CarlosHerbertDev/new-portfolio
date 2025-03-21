@@ -2,7 +2,7 @@ import { getInfo } from "@api/service"
 import { Apidata } from "@interfaces/types";
 import { useEffect, useState } from "react"
 
-export function Project() {
+export function Projects() {
   const [projects, setProjects] = useState<Apidata[]>([]);
   useEffect(() => {
     const fecthdetails = async () => {
