@@ -1,3 +1,4 @@
+import Globalstyle from "@styles/global-style";
 import { AppRoutes } from "./pages/routes";
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
 
   return (
     <>
+      <Globalstyle />
       <AppRoutes />
     </>
   )
