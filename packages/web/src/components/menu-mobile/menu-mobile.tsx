@@ -1,6 +1,7 @@
 import { Sling as Hamburger } from 'hamburger-react'
 import { ConatinerHamburguer, MenuList, MenuWrapper } from "./style"
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const MenuMobile = () => {
   const [isOpen, setOpen] = useState(false)
@@ -23,12 +24,11 @@ const MenuMobile = () => {
                 <Hamburger toggled={isOpen} toggle={setOpen} size={20} rounded/>    
             </ConatinerHamburguer>  
             <MenuWrapper $isOpen={isOpen}>
-                <MenuList>
-                    <li>Home</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                <MenuList onClick={() => setOpen(false)}>
+                    <Link to={'/'}>Home</Link>
+                    <Link to={'/projects'}>Projects</Link>   
+                    <Link to={'/curriculum'}>Curriculum</Link>   
+                    <Link to={'/about'}>About</Link>
                 </MenuList>
             </MenuWrapper>
         </>

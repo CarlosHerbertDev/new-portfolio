@@ -1,3 +1,4 @@
+import { DisplayFlex} from "@styles/reusable-style";
 import styled from "styled-components";
 
 export const Container = styled.header `
@@ -15,4 +16,8 @@ export const Navegation =  styled.ul `
     gap: 30px;
 `
 
-
+export const ContainerLogo = styled(DisplayFlex) `
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+`

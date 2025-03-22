@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
 
-export const DisplayFlelx = styled.div `
+export const DisplayFlex = styled.div `
     display: flex;
 `

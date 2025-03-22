@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Container, Navegation } from "./style";
+import { Container, ContainerLogo, Navegation } from "./style";
 import { Link } from "react-router-dom";
 import MenuMobile from "@components/menu-mobile/menu-mobile";
 
 export const Header: React.FC = () => {
     
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 700);
+            setIsMobile(window.innerWidth <= 800);
         };
 
         window.addEventListener("resize", handleResize);
@@ -21,13 +21,17 @@ export const Header: React.FC = () => {
     return (
 
             <Container>
-                <p>logo aqui</p>
-                {isMobile ? (
+                <ContainerLogo>
+                    <p>CarlosHerbertDev</p>
+                    <div>
+                        linguas
+                    </div>
+                </ContainerLogo>
                 
+                
+                {isMobile ? (
                     <MenuMobile />
-
                 ) : (
-
                     <Navegation>
                         <li>
                             <Link to ={`/`}>Home</Link>
@@ -42,12 +46,9 @@ export const Header: React.FC = () => {
                             <Link to ={`/about`}>About</Link>
                         </li>
                     </Navegation>
-
                 )
             }
-
             </Container>
-
         )
 
 }

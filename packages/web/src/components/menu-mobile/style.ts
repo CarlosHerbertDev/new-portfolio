@@ -1,4 +1,4 @@
-import { DisplayFlelx } from "@styles/reusable-style";
+import { DisplayFlex } from "@styles/reusable-style";
 import styled from "styled-components";
 
 export const ConatinerHamburguer = styled.div `
@@ -27,9 +27,9 @@ export const MenuWrapper = styled.div<{ $isOpen: boolean}> `
     transition: transform 0.3s ease-in-out;
 `
 
-export const MenuList  = styled(DisplayFlelx) `
+export const MenuList  = styled(DisplayFlex) `
     flex-direction: column;
     jestify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
 `
