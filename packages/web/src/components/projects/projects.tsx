@@ -6,16 +6,17 @@ import { useEffect, useState } from "react"
 
 export function Projects() {
   const [projects, setProjects] = useState<Apidata[]>([]);
-  const [text, setText] = useState('eu vim aqui');
-  const [teste, setTeste] = useState(true)
-  const texts = ["Olá, mundo!", "Bem-vindo ao site!", "Tradução automática"];
+  // const [text, setText] = useState('en');
+  const [teste, setTeste] = useState('en')
+  const [texts, setTexts] = useState<string[]>(["Olá, mundo!", "Bem-vindo ao site!", "Tradução automática"])
 
   useEffect(() => {
     const fecthdetails = async () => {
       const response = await getInfo('curriculum')
-      const translated = await translateText(text, 'en')
-      setText(translated)
-        setProjects(response)
+      const translated = await translateText(texts, teste)
+      console.log(translated);
+      setTexts(translated ?? [])
+      setProjects(response)
       console.log(response)
       
 
@@ -23,7 +24,7 @@ export function Projects() {
 
     }
     fecthdetails()
-  }, [])
+  }, [teste])
 
   console.log(projects);
   
@@ -36,10 +37,10 @@ export function Projects() {
   return (
     <>
             <h1>
-              eae
+              {texts[1]}
               </h1>
-            <button onClick={() => setTeste(!teste)}>
-              Traduzir
+            <button onClick={() => teste === 'en' ? setTeste('pt') : setTeste('en')}>
+            {texts[2]}
             </button>
       </>
   )
