@@ -1,25 +1,30 @@
 import { getInfo } from "@api/service"
-import { translateText } from "@api/teste";
 import { Apidata } from "@interfaces/types";
 import { useEffect, useState } from "react"
+import { useTranslation } from 'react-i18next';
+import translateText from "./teste";
 
 
 export function Projects() {
-  const [projects, setProjects] = useState<Apidata[]>([]);
-  // const [text, setText] = useState('en');
-  const [teste, setTeste] = useState('pt')
-  const [translated, setTranslated] = useState<string[]>([])
+  const [projects, setProjects] = useState<string[]>([]);
+  // const [text, setText] = useState('');
+  // const [teste, setTeste] = useState('pt')
+  // const [translated, setTranslated] = useState<string[]>([])
   const texts = ["Olá, mundo!", "Bem-vindo ao site!", "Tradução automática"]
+
+  const [language, setLanguage] = useState<string>('en');
   useEffect(() => {
     const fecthdetails = async () => {
-      const response = await getInfo('curriculum')
-      setProjects(response)
-      const trans = response.map((project) => {
-        return {title: project.title, description: project.description}
-      })
-      console.log(trans)
+      // const response = await getInfo('curriculum')
+      translateText('o que?', 'en').then(console.log)
+   
       
-      const translated = await translateText(texts, 'en')
+    
+      // const trans = response.map((project) => {
+      //   return {title: project.title, description: project.description}
+      // })
+      
+      // const translated = await translateText(texts, 'en')
       // const tran = await translateText(trans, 'en')
       // setTranslated([translated, tran])
       
@@ -28,42 +33,33 @@ export function Projects() {
 
     }
     fecthdetails()
-  }, [])
+  }, [language])
   
-  // async function testando(params: string) {
-  //   const translated = await translateText(params, 'en')
-  //   return translated
+  // function testando(text: string) {
+  //   // const translated = await translateText(text, lang)
+  //   // return translated
+
+  //   setText(text)
+  //   return text
   // }
 
 
   return (
     <>
-            <h1>
-              { teste === 'en' ? translated[1] : texts[1]}
-              </h1>
-            {projects.map((project) => (
-              <div key={project._id}>
+            
 
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
+    <div>
+      <h1> {projects[2]}</h1>
+    </div>
 
-                
-              </div>
-            ))}
 
+    <button onClick={(() => language === 'pt' ? setLanguage('en') : setLanguage('pt'))}>
+tradução 
+
+    </button>
 
 
 
-
-
-
-
-
-
-
-            <button onClick={() => teste === 'en' ? setTeste('pt') : setTeste('en')}>
-            {texts[2]}
-            </button>
       </>
   )
 }
