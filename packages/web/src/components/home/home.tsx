@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
-import React from "react";
+import { ReactElement } from "react";
 
-export const Home: React.FC = () => {
+export const Home = (): ReactElement => {
 return(
         <>
 

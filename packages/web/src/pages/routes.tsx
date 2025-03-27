@@ -3,10 +3,10 @@ import { Curriculum } from "@components/curriculum/curriculum";
 import { Header } from "@components/header/header";
 import { Home } from "@components/home/home";
 import { Projects } from "@components/projects/projects";
-import React from "react";
+import { ReactElement } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-export const AppRoutes: React.FC = () => (
+export const AppRoutes = (): ReactElement => (
 
     <BrowserRouter>
         <Header />

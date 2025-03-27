@@ -1,3 +1,6 @@
+import React, { ReactNode } from "react";
+
+
 export interface Apidata {
   _id: string;
   _createdAt: string;
@@ -12,4 +15,12 @@ export interface Apidata {
       };
   };
   position?: number;
+}
+
+export interface ContextProviderType {
+  lang: string
+  setLang: React.Dispatch<React.SetStateAction<string>>
+}
+export interface ContextProps {
+  children: ReactNode
 }

@@ -1,6 +1,6 @@
-import React from "react";
+import { ReactElement } from "react";
 
-export const Curriculum: React.FC = () => {
+export const Curriculum = (): ReactElement => {
 return(
 
     <h1>Curriculum</h1>

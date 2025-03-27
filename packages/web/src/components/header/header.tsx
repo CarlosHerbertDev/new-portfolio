@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { Container, ContainerLogo, Navegation } from "./style";
 import { Link } from "react-router-dom";
 import MenuMobile from "@components/menu-mobile/menu-mobile";
 
-export const Header: React.FC = () => {
+export const Header = (): ReactElement => {
     
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
 

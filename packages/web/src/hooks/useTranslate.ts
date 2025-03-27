@@ -1,6 +1,7 @@
 
-import translateText from "@components/projects/teste";
+import translateText from "@utils/translateDataApi";
 import { useEffect } from "react";
+
 
 export function useTranslation(language: string) {
   useEffect(() => {

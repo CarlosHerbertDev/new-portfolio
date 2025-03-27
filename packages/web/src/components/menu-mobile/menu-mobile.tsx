@@ -1,9 +1,9 @@
 import { Sling as Hamburger } from 'hamburger-react'
 import { ConatinerHamburguer, MenuList, MenuWrapper } from "./style"
-import { useEffect, useState } from 'react'
+import { ReactElement, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const MenuMobile = () => {
+const MenuMobile = (): ReactElement => {
   const [isOpen, setOpen] = useState(false)
 
   useEffect(() => {

@@ -23,6 +23,8 @@
       "@mocks/*": ["mocks/*"],
       "@interfaces/*": ["interfaces/*"],
       "@styles/*": ["styles/*"],
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"],
     },
 
     /* Linting */

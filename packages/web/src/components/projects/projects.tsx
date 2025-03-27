@@ -1,14 +1,14 @@
 
-import { useState } from "react"
-import  {useTranslation}from "../../hooks/usetranslate";
-import { useContentApi } from "../../hooks/useContentApi";
+import { LanguageContext } from "@contexts/togglerLang";
+import { useContentApi } from "@hooks/useContentApi";
+import { useTranslation } from "@hooks/useTranslate";
+import { ReactElement, useContext} from "react"
 
 
-
-export function Projects() {
-  const [language, setLanguage] = useState<string>('');
-  useTranslation(language)
+export const Projects = (): ReactElement => {
+  const {lang, setLang} = useContext(LanguageContext)
   const dataAPI = useContentApi('project')
+  useTranslation(lang)
 
   return (
     <>
@@ -26,7 +26,7 @@ export function Projects() {
     
     })}
       
-      <button onClick={(() => language === 'en' ? setLanguage('pt') : setLanguage('en'))}>
+      <button onClick={(() => lang === 'en' ? setLang('pt') : setLang('en'))}>
       tradução 
     </button>
 
