@@ -1,12 +1,16 @@
 
-import { franc } from 'franc-min';
+
 import {Translate} from 'translate'
 
 export default async function translateText(text:string, langFrom:string) {
     // const language = navigator.language.split('-')[0]
+    // console.log(language);
+    console.log(langFrom);
+    
+   if (langFrom === '') return text
     
     let detectedLanguage = ''
-    console.log(detectedLanguage);
+
     
     if (langFrom === 'en') {
         detectedLanguage = 'pt'
