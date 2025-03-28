@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
 
 export interface Apidata {
@@ -18,9 +18,9 @@ export interface Apidata {
 }
 
 export interface ContextProviderType {
-  lang: string
-  setLang: React.Dispatch<React.SetStateAction<string>>
+  lang: string;
+  setLang: React.Dispatch<React.SetStateAction<string>>;
 }
 export interface ContextProps {
-  children: ReactNode
+  children: React.ReactNode;
 }

@@ -1,8 +1,7 @@
-
-import { LanguageContext } from "@contexts/togglerLang";
+import { LanguageContext } from "@contexts/tooglerLang/createContextLang";
 import { useContentApi } from "@hooks/useContentApi";
 import { useTranslation } from "@hooks/useTranslate";
-import { ReactElement, useContext} from "react"
+import { ReactElement, useContext } from "react";
 
 
 export const Projects = (): ReactElement => {
@@ -15,7 +14,7 @@ export const Projects = (): ReactElement => {
     <h1>Contéudo</h1>
     <h2> eu quero brilhar</h2>
 
-   
+
     {dataAPI.map((dataAPI) => {
       return (
         <div key={dataAPI._id}>

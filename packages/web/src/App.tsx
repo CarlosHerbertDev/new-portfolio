@@ -1,7 +1,7 @@
+import { LanguageProvider } from "@contexts/tooglerLang/togglerLang";
 import Globalstyle from "@styles/global-style";
-import { AppRoutes } from "./pages/routes";
 import { ReactElement } from "react";
-import { LanguageContext } from "@contexts/togglerLang";
+import { AppRoutes } from "./pages/routes";
 
 
 function App() : ReactElement {
@@ -9,10 +9,10 @@ function App() : ReactElement {
 
   return (
     <>
-    <LanguageContext>
+    <LanguageProvider>
       <Globalstyle />
       <AppRoutes />
-    </LanguageContext>
+    </LanguageProvider>
     </>
   )
 }
