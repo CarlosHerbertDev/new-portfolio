@@ -9,11 +9,22 @@ export function useTranslation(language: string) {
       const elements = Array.from(document.querySelectorAll("h2, p, span"));
 
       await Promise.all(
-        elements.map(async (el) => {
+        elements.map(async (el, index) => {
           const originalText = el.textContent || "";
           if (originalText) {
             const translatedText = await translateText(originalText, language);
-            el.textContent = translatedText;
+
+          if (language === 'en') {
+            localStorage.setItem(`chavezinha${index}`, originalText)
+            const eita = localStorage.getItem(`cha${index}`)
+            console.log(eita)
+            
+            eita ? el.textContent = eita : el.textContent = translatedText
+          } else if (language === 'pt'){
+            localStorage.setItem(`cha${index}`, originalText)
+            const novo = localStorage.getItem(`chavezinha${index}`)
+            el.textContent = novo
+          }
           }
         })
       );

@@ -5,9 +5,11 @@ import { ReactElement, useContext } from "react";
 
 
 export const Projects = (): ReactElement => {
-  const {lang, setLang} = useContext(LanguageContext)
+  const {lang} = useContext(LanguageContext)
   const dataAPI = useContentApi('project')
   useTranslation(lang)
+
+
 
   return (
     <>
@@ -24,11 +26,6 @@ export const Projects = (): ReactElement => {
       )
     
     })}
-      
-      <button onClick={(() => lang === 'en' ? setLang('pt') : setLang('en'))}>
-      tradução 
-    </button>
-
       </>
   )
 }

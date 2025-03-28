@@ -1,12 +1,13 @@
-import { ReactElement, useEffect, useState } from "react";
+import { ReactElement, useContext, useEffect, useState } from "react";
 import { Container, ContainerLogo, Navegation } from "./style";
 import { Link } from "react-router-dom";
 import MenuMobile from "@components/menu-mobile/menu-mobile";
+import { LanguageContext } from "@contexts/tooglerLang/createContextLang";
 
 export const Header = (): ReactElement => {
     
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
-
+    const {lang, setLang } = useContext(LanguageContext)
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 800);
@@ -23,9 +24,9 @@ export const Header = (): ReactElement => {
             <Container>
                 <ContainerLogo>
                     <p>CarlosHerbertDev</p>
-                    <div>
+                    <button onClick={(() => lang === 'en' ? setLang('pt') : setLang('en'))}>
                         linguas
-                    </div>
+                    </button>
                 </ContainerLogo>
                 
                 
