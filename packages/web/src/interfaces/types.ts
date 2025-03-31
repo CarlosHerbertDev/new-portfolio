@@ -1,5 +1,6 @@
 import React from "react";
 
+export type ApiStringData = Apidata | string
 
 export interface Apidata {
   _id: string;

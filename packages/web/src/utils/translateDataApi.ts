@@ -3,7 +3,9 @@ import {Translate} from 'translate'
 
 export default async function translateText(text:string, langFrom:string) {
     // const language = navigator.language.split('-')[0]
-    // console.log(language);
+    console.log(langFrom);
+    console.log(text);
+    
     
     let detectedLanguage = ''
     
