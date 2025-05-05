@@ -12,34 +12,34 @@ export async function traduzirObjetos(array: Apidata[], lang: string) {
             Object.keys(novoObjeto).map(async (key) => {
                  
             if (lang === 'en' && (key === 'description' || key === 'title')) {
-                localStorage.setItem(`chavezinha${key}`, novoObjeto[key])
+                localStorage.setItem(`${key}`, novoObjeto[key])
               }else if (lang === 'pt' && (key === 'description' || key === 'title')) {
-                const novo = localStorage.getItem(`chavezinha${key}`)
-                console.log(novo, 'getitem')
+                const getOriginalText = localStorage.getItem(`{key}`)
+                console.log(getOriginalText, 'getitem')
                 
-                if (novo !== null) {
+                if (getOriginalText !== null) {
                   if (key === 'description') {
-                    console.log(novo)
+                    console.log(getOriginalText)
                     
                     console.log(novoObjeto[key])
-                    novoObjeto[key] = `${novo}`
+                    novoObjeto[key] = `${getOriginalText}`
                     
                     
                   } else if (key === 'title') {
-                    novoObjeto[key] = novo;
+                    novoObjeto[key] = getOriginalText;
                   }
                 }
                 return
                 }
 
               if (key === 'description') {
-                const novo = await translateText(novoObjeto[key], lang);
-                novoObjeto.description = novo 
+                const getOriginalText = await translateText(novoObjeto[key], lang);
+                novoObjeto.description = getOriginalText 
               }
 
               if (key === 'title') {
-                const novo = await translateText(novoObjeto[key], lang);
-                novoObjeto.title = novo 
+                const getOriginalText = await translateText(novoObjeto[key], lang);
+                novoObjeto.title = getOriginalText 
               }
 
             })
