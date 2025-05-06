@@ -1,8 +1,7 @@
 {
     "translation": {
-        "home": "inicio",
-        "projects": "projetos",
-        "curriculum": "curriculo",
-        "about": "sobre"
+        "projects": "Projetos",
+        "curriculum": "Curriculo",
+        "about": "Sobre"
     }
 }

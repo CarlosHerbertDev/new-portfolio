@@ -3,6 +3,7 @@ import { Container, ContainerLogo, Navegation } from "./style";
 import { Link } from "react-router-dom";
 import MenuMobile from "@components/menu-mobile/menu-mobile";
 import { LanguageContext } from "@contexts/tooglerLang/createContextLang";
+import { useTranslation } from "react-i18next";
 
 export const Header = (): ReactElement => {
     
@@ -11,7 +12,7 @@ export const Header = (): ReactElement => {
     const {
         t,  
         i18n: { changeLanguage }
-    } =  useTransition()
+    } =  useTranslation()
 
     useEffect(() => {
         const handleResize = () => {
@@ -23,8 +24,10 @@ export const Header = (): ReactElement => {
     }, []);
 
     useEffect(() => {
-
-    })
+        if (lang !== '') {
+            changeLanguage(lang)
+        }
+    }, [lang])
 
     return (
 
@@ -45,13 +48,13 @@ export const Header = (): ReactElement => {
                             <Link to ={`/`}>Home</Link>
                         </li>
                         <li>
-                            <Link to ={`/projects`}>Projects</Link>
+                            <Link to ={`/projects`}> {t('projects')} </Link>
                         </li>
                         <li>
-                            <Link to ={`/curriculum`}>Curriculum</Link>
+                            <Link to ={`/curriculum`}> {t('curriculum')} </Link>
                         </li>
                         <li>
-                            <Link to ={`/about`}>About</Link>
+                            <Link to ={`/about`}> {t('about')} </Link>
                         </li>
                     </Navegation>
                 )
