@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { ReactElement } from "react";
 
 export const Home = (): ReactElement => {
-const { dataAPI, loading } = useContentApi('home')
+const { dataAPI } = useContentApi('home')
 
 return(
         <>

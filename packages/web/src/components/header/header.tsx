@@ -1,4 +1,4 @@
-import { ReactElement, useContext, useEffect, useState } from "react";
+import { ReactElement, useContext, useEffect, useState} from "react";
 import { Container, ContainerLogo, Navegation } from "./style";
 import { Link } from "react-router-dom";
 import MenuMobile from "@components/menu-mobile/menu-mobile";
@@ -8,6 +8,11 @@ export const Header = (): ReactElement => {
     
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
     const {lang, setLang } = useContext(LanguageContext)
+    const {
+        t,  
+        i18n: { changeLanguage }
+    } =  useTransition()
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 800);
@@ -17,7 +22,9 @@ export const Header = (): ReactElement => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    useEffect(() => {
 
+    })
 
     return (
 
