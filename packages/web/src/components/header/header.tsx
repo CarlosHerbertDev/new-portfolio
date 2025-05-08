@@ -4,15 +4,13 @@ import { Link } from "react-router-dom";
 import MenuMobile from "@components/menu-mobile/menu-mobile";
 import { LanguageContext } from "@contexts/tooglerLang/createContextLang";
 import { useTranslation } from "react-i18next";
+import teste from '../../assets/react.svg' 
 
 export const Header = (): ReactElement => {
     
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
     const {lang, setLang } = useContext(LanguageContext)
-    const {
-        t,  
-        i18n: { changeLanguage }
-    } =  useTranslation()
+    const { t, i18n: { changeLanguage }} =  useTranslation()
 
     useEffect(() => {
         const handleResize = () => {
@@ -33,9 +31,13 @@ export const Header = (): ReactElement => {
 
             <Container>
                 <ContainerLogo>
-                    <p>CarlosHerbertDev</p>
+                    <p>
+                        <a href="">
+                        CarlosHerbertDev
+                        </a>
+                    </p>
                     <button onClick={(() => lang === 'en' ? setLang('pt') : setLang('en'))}>
-                        linguas
+                        <img src={lang === 'en'? `${teste}` : `${teste}`} alt="" />
                     </button>
                 </ContainerLogo>
                 

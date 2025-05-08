@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+
+@layer base {
+    body {
+      @apply my-0 mx-auto max-w-[1440px] p-4;
+    }
+  }
+
+  

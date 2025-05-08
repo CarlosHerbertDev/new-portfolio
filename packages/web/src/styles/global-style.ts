@@ -13,7 +13,7 @@ body {
     font-size: 62.5%;
     padding: 20px;
     margin: 0 auto;
-    max-width: 1440pxnn
+    max-width: 1440px;
 }
 
 li {
