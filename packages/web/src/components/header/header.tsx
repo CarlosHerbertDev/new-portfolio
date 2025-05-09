@@ -1,5 +1,4 @@
 import { ReactElement, useContext, useEffect, useState} from "react";
-import { Container, ContainerLogo, Navegation } from "./style";
 import { Link } from "react-router-dom";
 import MenuMobile from "@components/menu-mobile/menu-mobile";
 import { LanguageContext } from "@contexts/tooglerLang/createContextLang";
@@ -29,23 +28,21 @@ export const Header = (): ReactElement => {
 
     return (
 
-            <Container>
-                <ContainerLogo>
+            <header className="flex justify-between items-center">
+                <div className="flex justify-center items-center flex-row gap-[10px]">
                     <p>
-                        <a href="">
                         CarlosHerbertDev
-                        </a>
                     </p>
                     <button onClick={(() => lang === 'en' ? setLang('pt') : setLang('en'))}>
                         <img src={lang === 'en'? `${teste}` : `${teste}`} alt="" />
                     </button>
-                </ContainerLogo>
+                </div>
                 
                 
                 {isMobile ? (
                     <MenuMobile />
                 ) : (
-                    <Navegation>
+                    <ul className="flex justify-center items-center gap-[30px]">
                         <li>
                             <Link to ={`/`}>Home</Link>
                         </li>
@@ -58,10 +55,10 @@ export const Header = (): ReactElement => {
                         <li>
                             <Link to ={`/about`}> {t('about')} </Link>
                         </li>
-                    </Navegation>
+                    </ul>
                 )
             }
-            </Container>
+            </header>
         )
 
 }

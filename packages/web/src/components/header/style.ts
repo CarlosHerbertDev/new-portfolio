@@ -18,6 +18,7 @@ export const Navegation =  styled.ul `
 
 export const ContainerLogo = styled(DisplayFlex) `
     justify-content: center;
+    align-items: center;
     flex-direction: row;
     gap: 10px;
 `
