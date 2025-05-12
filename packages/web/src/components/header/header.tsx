@@ -28,7 +28,7 @@ export const Header = (): ReactElement => {
 
     return (
 
-            <header className="flex justify-between items-center">
+            <header className="container justify-between">
                 <div className="flex justify-center items-center flex-row gap-[10px]">
                     <p>
                         CarlosHerbertDev

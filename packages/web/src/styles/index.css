@@ -3,8 +3,13 @@
 
 @layer base {
     body {
-      @apply my-0 mx-auto max-w-[1440px] p-4;
+      @apply my-0 mx-auto p-4;
     }
   }
 
+  @layer components {
+    .container {
+      @apply my-0 mx-auto flex items-center max-w-[1440px] w-full;
+    }
+  }
   
