@@ -22,17 +22,22 @@ const MenuMobile = (): ReactElement => {
 
   return (
         <>
-            <ConatinerHamburguer>
+            <div className='flex items-center with-[48px] h-[40px] z-2 border-1 rounded-sm'>
                 <Hamburger toggled={isOpen} toggle={setOpen} size={20} rounded/>    
-            </ConatinerHamburguer>  
-            <MenuWrapper $isOpen={isOpen}>
-                <MenuList onClick={() => setOpen(false)}>
+            </div>  
+            {/* <MenuWrapper $isOpen={isOpen}> */}
+              <div className={isOpen? 'translate-x-[0] w-[50%] fixed top-0 right-0 h-screen text-black z-1 flex justify-center items-center transition-transform duration-300 ease-in-out bg-emerald-500' : 'translate-x-[100%]  w-[50%] fixed top-0 right-0 h-screen text-black z-1 flex justify-center items-center transition-transform duration-300 ease-in-out bg-emerald-500'}>
+                <div
+                  className='flex flex-col justify-center items-center gap-[40px]' 
+                  onClick={() => setOpen(false)}
+                >
                     <Link to={'/'}>Home</Link>
                     <Link to={'/projects'}>{t('projects')}</Link>   
                     <Link to={'/curriculum'}>{t('curriculum')}</Link>   
                     <Link to={'/about'}>{t('about')}</Link>
-                </MenuList>
-            </MenuWrapper>
+                </div>
+              </div>  
+            {/* </MenuWrapper> */}
         </>
     )
 }
