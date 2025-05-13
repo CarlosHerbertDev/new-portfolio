@@ -7,13 +7,13 @@ import teste from '../../assets/react.svg'
 
 export const Header = (): ReactElement => {
     
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
     const {lang, setLang } = useContext(LanguageContext)
     const { t, i18n: { changeLanguage }} =  useTranslation()
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 800);
+            setIsMobile(window.innerWidth <= 700);
         };
 
         window.addEventListener("resize", handleResize);
