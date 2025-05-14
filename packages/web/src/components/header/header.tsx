@@ -12,6 +12,15 @@ export const Header = (): ReactElement => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
     const {lang, setLang } = useContext(LanguageContext)
     const { t, i18n: { changeLanguage }} =  useTranslation()
+    const [select, setSelect] = useState('')
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+      const handleChange = (value:string) => {
+            setSelect(value);
+            setDropdownOpen(false);
+        };
+
+
 
     useEffect(() => {
         const handleResize = () => {
@@ -35,9 +44,24 @@ export const Header = (): ReactElement => {
                     <p>
                         CarlosHerbertDev
                     </p>
-                    <button onClick={(() => lang === 'en' ? setLang('pt') : setLang('en'))}>
+
+                    {/* <button onClick={(() => lang === 'en' ? setLang('pt') : setLang('en'))}>
                         <img src={lang === 'en'? `${brasil}` : `${eua}`} alt="" />
-                    </button>
+                    </button> */}
+
+                    <div className="relative w-full inline-block">
+                        <button 
+                            className="px-1 py-4 w-full rounded-sm cursor-pointer bg-green-400 text-yellow-800 border-1 border-indigo-800"
+                            onClick={() => setDropdownOpen(!isDropdownOpen)}>
+                                {select || 'pt'}
+                                    {isDropdownOpen && (
+                                     <ul className="absolute right-0 left-0 top-full z-1 rounded-sm bg-gray-950 text-white p-0 max-w-[150px] overflow-auto">
+                                        <li onClick={() => handleChange('pt')}> pt </li>
+                                        <li onClick={() => handleChange('en')}> en </li>
+                                    </ul>
+                                )}
+                        </button>
+                    </div>
                 </div>
                 
                 

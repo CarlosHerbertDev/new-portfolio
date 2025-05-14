@@ -11,5 +11,9 @@
     .container {
       @apply my-0 mx-auto flex items-center max-w-[1440px] w-full;
     }
+
+    .itemdrop {
+      @apply px-3 py-3 
+    }
   }
   
