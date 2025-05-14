@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 
 const MenuMobile = (): ReactElement => {
   const [isOpen, setOpen] = useState(false)
-   const { t } =  useTranslation()
+  const { t } =  useTranslation()
 
   useEffect(() => {
     if (isOpen) {

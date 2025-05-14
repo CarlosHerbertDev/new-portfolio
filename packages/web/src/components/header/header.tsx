@@ -4,6 +4,8 @@ import MenuMobile from "@components/menu-mobile/menu-mobile";
 import { LanguageContext } from "@contexts/tooglerLang/createContextLang";
 import { useTranslation } from "react-i18next";
 import teste from '../../assets/react.svg' 
+import brasil from '../../assets/brasil.png' 
+import eua from '../../assets/eua.png' 
 
 export const Header = (): ReactElement => {
     
@@ -34,7 +36,7 @@ export const Header = (): ReactElement => {
                         CarlosHerbertDev
                     </p>
                     <button onClick={(() => lang === 'en' ? setLang('pt') : setLang('en'))}>
-                        <img src={lang === 'en'? `${teste}` : `${teste}`} alt="" />
+                        <img src={lang === 'en'? `${brasil}` : `${eua}`} alt="" />
                     </button>
                 </div>
                 
