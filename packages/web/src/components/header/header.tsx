@@ -3,22 +3,24 @@ import { Link } from "react-router-dom";
 import MenuMobile from "@components/menu-mobile/menu-mobile";
 import { LanguageContext } from "@contexts/tooglerLang/createContextLang";
 import { useTranslation } from "react-i18next";
-import teste from '../../assets/react.svg' 
-import brasil from '../../assets/brasil.png' 
-import eua from '../../assets/eua.png' 
+import { languages } from "../../data/languages";
+// import teste from '../../assets/react.svg' 
+// import brasil from '../../assets/brasil.png' 
+// import eua from '../../assets/eua.png' 
 
 export const Header = (): ReactElement => {
     
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
     const {lang, setLang } = useContext(LanguageContext)
     const { t, i18n: { changeLanguage }} =  useTranslation()
-    const [select, setSelect] = useState('')
+    const [select, setSelect] = useState('pt')
     const [isDropdownOpen, setDropdownOpen] = useState(false);
-
-      const handleChange = (value:string) => {
+    const handleChange = (value:string) => {
             setSelect(value);
             setDropdownOpen(false);
+            setLang(value)
         };
+    const selectedLang = languages.find(lang => lang.name === select)
 
 
 
@@ -51,13 +53,38 @@ export const Header = (): ReactElement => {
 
                     <div className="relative w-full inline-block">
                         <button 
-                            className="px-1 py-4 w-full rounded-sm cursor-pointer bg-green-400 text-yellow-800 border-1 border-indigo-800"
+                            className={`px-1 py-1 w-full cursor-pointer bg-green-400 text-yellow-800 border-1 border-indigo-800 ${isDropdownOpen ? 'rounded-t-sm' : 'rounded-sm'}`}
                             onClick={() => setDropdownOpen(!isDropdownOpen)}>
-                                {select || 'pt'}
+                                <div className="flex justify-center items-center gap-[7px]">
+                                    {selectedLang && selectedLang.label}
+                                    {selectedLang && <img src={selectedLang.flag} alt={selectedLang.label} />}
+                                </div>
                                     {isDropdownOpen && (
-                                     <ul className="absolute right-0 left-0 top-full z-1 rounded-sm bg-gray-950 text-white p-0 max-w-[150px] overflow-auto">
-                                        <li onClick={() => handleChange('pt')}> pt </li>
-                                        <li onClick={() => handleChange('en')}> en </li>
+                                    <ul className="absolute right-0 left-0 top-full z-1 rounded-b-sm bg-gray-950 text-white p-0 max-w-[150px] overflow-auto">
+                                        {/* <li 
+                                            className = 'itemdrop'
+                                            onClick={() => handleChange('pt')}> 
+                                                pt 
+                                        </li>
+<li 
+                                            className = 'itemdrop'
+                                            onClick={() => handleChange('en')}> 
+                                                en 
+                                        </li>
+                                                                             */}
+                                        {
+                                            languages.map((lang) => (
+                                                <li 
+                                                    key={lang.name} 
+                                                    className = 'itemdrop'
+                                                    onClick={() => handleChange(lang.name)}>
+                                                        <div className="flex justify-center items-center gap-[7px]">
+                                                            {lang.label}
+                                                            <img src={lang.flag} alt={lang.label} />
+                                                        </div>
+                                                </li>
+                                            ))
+                                        }
                                     </ul>
                                 )}
                         </button>
