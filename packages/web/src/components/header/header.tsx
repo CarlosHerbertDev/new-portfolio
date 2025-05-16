@@ -4,6 +4,8 @@ import MenuMobile from "@components/menu-mobile/menu-mobile";
 import { LanguageContext } from "@contexts/tooglerLang/createContextLang";
 import { useTranslation } from "react-i18next";
 import { languages } from "../../data/languages";
+import DropdawnMenu from "@components/dropdawn-menu/dropdawn-menu";
+import { div, p } from "motion/react-client";
 // import teste from '../../assets/react.svg' 
 // import brasil from '../../assets/brasil.png' 
 // import eua from '../../assets/eua.png' 
@@ -13,14 +15,14 @@ export const Header = (): ReactElement => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
     const {lang, setLang } = useContext(LanguageContext)
     const { t, i18n: { changeLanguage }} =  useTranslation()
-    const [select, setSelect] = useState('pt')
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
-    const handleChange = (value:string) => {
-            setSelect(value);
-            setDropdownOpen(false);
-            setLang(value)
-        };
-    const selectedLang = languages.find(lang => lang.name === select)
+    // const [select, setSelect] = useState('pt')
+    // const [isDropdownOpen, setDropdownOpen] = useState(false);
+    // const handleChange = (value:string) => {
+    //         setSelect(value);
+    //         setDropdownOpen(false);
+    //         setLang(value)
+    //     };
+    // const selectedLang = languages.find(lang => lang.name === select)
 
 
 
@@ -42,7 +44,13 @@ export const Header = (): ReactElement => {
     return (
 
             <header className="container justify-between">
-                <div className="flex justify-start items-center flex-row gap-[10px]">
+
+
+                <DropdawnMenu />
+
+
+
+                {/* <div className="flex justify-start items-center flex-row gap-[10px]">
                         <div className="relative w-full inline-block">
                             <button 
                                 className={`px-1 py-1 w-full cursor-pointer bg-white-400 text-yellow-800 border-1 border-indigo-800 ${isDropdownOpen ? 'rounded-t-sm' : 'rounded-sm'}`}
@@ -69,13 +77,10 @@ export const Header = (): ReactElement => {
                                         </ul>
                                     )}
                             </button>
-                        </div>
-                <div className="flex w-full ">
-                    <p>
-                        CarlosHerbertDev
-                    </p>
-                </div>      
-                    </div>
+                        </div>  
+                    </div> */}
+
+
                     {/* <button onClick={(() => lang === 'en' ? setLang('pt') : setLang('en'))}>
                         <img src={lang === 'en'? `${brasil}` : `${eua}`} alt="" />
                         </button> */}
@@ -83,8 +88,12 @@ export const Header = (): ReactElement => {
                 
                 
                 {isMobile ? (
-                    <MenuMobile />
+                        <MenuMobile />
                 ) : (
+                <div className="flex justify-between items-center w-full">
+                     <p>
+                        CarlosHerbertDev
+                    </p>
                     <ul className="flex justify-center items-center gap-[30px]">
                         <li>
                             <Link to ={`/`}>Home</Link>
@@ -99,6 +108,7 @@ export const Header = (): ReactElement => {
                             <Link to ={`/about`}> {t('about')} </Link>
                         </li>
                     </ul>
+                </div>
                 )
             }
             </header>
