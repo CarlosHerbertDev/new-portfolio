@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import MenuMobile from "@components/menu-mobile/menu-mobile";
 import { LanguageContext } from "@contexts/tooglerLang/createContextLang";
 import { useTranslation } from "react-i18next";
-import { languages } from "../../data/languages";
 import DropdawnMenu from "@components/dropdawn-menu/dropdawn-menu";
-import { div, p } from "motion/react-client";
+import { div } from "motion/react-client";
 // import teste from '../../assets/react.svg' 
 // import brasil from '../../assets/brasil.png' 
 // import eua from '../../assets/eua.png' 
@@ -13,7 +12,7 @@ import { div, p } from "motion/react-client";
 export const Header = (): ReactElement => {
     
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
-    const {lang, setLang } = useContext(LanguageContext)
+    const {lang} = useContext(LanguageContext)
     const { t, i18n: { changeLanguage }} =  useTranslation()
     // const [select, setSelect] = useState('pt')
     // const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -39,14 +38,136 @@ export const Header = (): ReactElement => {
         if (lang !== '') {
             changeLanguage(lang)
         }
-    }, [lang])
+    }, [])
 
     return (
 
-            <header className="container justify-between">
+            <header className="container justify-between z-1">
 
 
-                <DropdawnMenu />
+                {isMobile ? (
+                    <div className="flex justify-between items-center w-full z-2">
+                        <DropdawnMenu />
+                        <p>
+                            CarlosHerbertDev
+                        </p>
+                        <MenuMobile />
+                    </div>
+                ) : (
+                
+                <div className="flex justify-between items-center w-full">
+                    <div className="flex items-center  gap-[15px]">
+                        <p>CarlosHerbertDev</p>
+                        <DropdawnMenu />
+                    </div>   
+                
+                    <ul className="flex justify-center items-center gap-[30px]">
+                        <li>
+                            <Link to ={`/`}>Home</Link>
+                        </li>
+                        <li>
+                            <Link to ={`/projects`}> {t('projects')} </Link>
+                        </li>
+                        <li>
+                            <Link to ={`/curriculum`}> {t('curriculum')} </Link>
+                        </li>
+                        <li>
+                            <Link to ={`/about`}> {t('about')} </Link>
+                        </li>
+                    </ul> 
+                </div>
+
+
+                )
+            }
+
+
+
+
+
+
+
+
+
+                {/* <div className="flex items-center  gap-[15px]">
+                    <p>CarlosHerbertDev</p>
+                    <DropdawnMenu />
+                </div>   
+                
+                <ul className="flex justify-center items-center gap-[30px]">
+                    <li>
+                        <Link to ={`/`}>Home</Link>
+                    </li>
+                    <li>
+                        <Link to ={`/projects`}> {t('projects')} </Link>
+                    </li>
+                    <li>
+                        <Link to ={`/curriculum`}> {t('curriculum')} </Link>
+                    </li>
+                    <li>
+                        <Link to ={`/about`}> {t('about')} </Link>
+                    </li>
+                </ul> */}
+
+
+                
+                
+            </header>
+        )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -84,34 +205,4 @@ export const Header = (): ReactElement => {
                     {/* <button onClick={(() => lang === 'en' ? setLang('pt') : setLang('en'))}>
                         <img src={lang === 'en'? `${brasil}` : `${eua}`} alt="" />
                         </button> */}
-
-                
-                
-                {isMobile ? (
-                        <MenuMobile />
-                ) : (
-                <div className="flex justify-between items-center w-full">
-                     <p>
-                        CarlosHerbertDev
-                    </p>
-                    <ul className="flex justify-center items-center gap-[30px]">
-                        <li>
-                            <Link to ={`/`}>Home</Link>
-                        </li>
-                        <li>
-                            <Link to ={`/projects`}> {t('projects')} </Link>
-                        </li>
-                        <li>
-                            <Link to ={`/curriculum`}> {t('curriculum')} </Link>
-                        </li>
-                        <li>
-                            <Link to ={`/about`}> {t('about')} </Link>
-                        </li>
-                    </ul>
-                </div>
-                )
-            }
-            </header>
-        )
-
 }
