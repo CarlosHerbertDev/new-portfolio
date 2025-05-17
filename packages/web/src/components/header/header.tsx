@@ -4,7 +4,7 @@ import MenuMobile from "@components/menu-mobile/menu-mobile";
 import { LanguageContext } from "@contexts/tooglerLang/createContextLang";
 import { useTranslation } from "react-i18next";
 import DropdawnMenu from "@components/dropdawn-menu/dropdawn-menu";
-import { div } from "motion/react-client";
+import { div, p } from "motion/react-client";
 // import teste from '../../assets/react.svg' 
 // import brasil from '../../assets/brasil.png' 
 // import eua from '../../assets/eua.png' 
@@ -42,8 +42,8 @@ export const Header = (): ReactElement => {
 
     return (
 
-            <header className="container justify-between z-1">
 
+          <header className="container justify-between z-1">
 
                 {isMobile ? (
                     <div className="flex justify-between items-center w-full z-2">
@@ -77,41 +77,9 @@ export const Header = (): ReactElement => {
                     </ul> 
                 </div>
 
-
                 )
             }
-
-
-
-
-
-
-
-
-
-                {/* <div className="flex items-center  gap-[15px]">
-                    <p>CarlosHerbertDev</p>
-                    <DropdawnMenu />
-                </div>   
-                
-                <ul className="flex justify-center items-center gap-[30px]">
-                    <li>
-                        <Link to ={`/`}>Home</Link>
-                    </li>
-                    <li>
-                        <Link to ={`/projects`}> {t('projects')} </Link>
-                    </li>
-                    <li>
-                        <Link to ={`/curriculum`}> {t('curriculum')} </Link>
-                    </li>
-                    <li>
-                        <Link to ={`/about`}> {t('about')} </Link>
-                    </li>
-                </ul> */}
-
-
-                
-                
+        
             </header>
         )
 
