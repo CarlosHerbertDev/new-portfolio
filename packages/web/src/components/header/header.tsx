@@ -38,7 +38,7 @@ export const Header = (): ReactElement => {
         if (lang !== '') {
             changeLanguage(lang)
         }
-    }, [])
+    }, [lang])
 
     return (
 
