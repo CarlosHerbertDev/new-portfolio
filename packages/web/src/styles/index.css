@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #272727;
-  --color-secondary: #29648A;
+  --color-primary: #2e2e2e;
+  --color-secondary: #111111;
+  --color-tertiary: #ededed;
+  --color-quaternary: #175bc0;
+  --default-font-family: 'Roboto', sans-serif;
 }
 
 
 @layer base {
     body {
-      @apply my-0 mx-auto p-4 bg-primary text-secondary font-[default-font-family];
+      @apply my-0 mx-auto p-4 bg-primary text-tertiary;
     }
   }
 

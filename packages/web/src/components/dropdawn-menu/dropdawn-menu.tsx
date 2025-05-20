@@ -19,7 +19,7 @@ return (
         <div className="flex justify-start items-center flex-row gap-[10px]">
                                 <div className="relative w-full inline-block">
                                     <button 
-                                        className={`px-1 py-1 w-full cursor-pointer bg-secondary text-white border-1 border-secondary ${isDropdownOpen ? 'rounded-t-sm' : 'rounded-sm'}`}
+                                        className={`px-1 py-1 w-full cursor-pointer bg-quaternary text-white border-1 border-secondary ${isDropdownOpen ? 'rounded-t-sm' : 'rounded-sm'}`}
                                         onClick={() => setDropdownOpen(!isDropdownOpen)}>
                                             <div className="flex justify-center items-center gap-[7px]">
                                                 {selectedLang && selectedLang.label}

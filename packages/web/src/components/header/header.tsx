@@ -47,7 +47,7 @@ export const Header = (): ReactElement => {
                 {isMobile ? (
                     <div className="flex justify-between items-center w-full z-2">
                         <DropdawnMenu />
-                        <p className="text-white text-[20px] font-bold">
+                        <p className="text-white text-[20px] font-bold bg-secondary">
                             CarlosHerbertDev
                         </p>
                         <MenuMobile />
@@ -56,12 +56,12 @@ export const Header = (): ReactElement => {
                 
                 <div className="flex justify-between items-center w-full">
                     <div className="flex items-center  gap-[15px]">
-                         <p className="text-white text-[20px]">
+                         <p className="text-white text-[20px] bg-secondary p-1 rounded">
                             CarlosHerbertDev</p>
                         <DropdawnMenu />
                     </div>   
                 
-                    <ul className="flex justify-center items-center gap-[30px]">
+                    <ul className="flex justify-center items-center gap-[30px] font-medium text-[15px] uppercase">
                         <li>
                             <Link to ={`/`}>Home</Link>
                         </li>
