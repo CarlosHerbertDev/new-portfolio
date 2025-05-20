@@ -4,7 +4,6 @@ import MenuMobile from "@components/menu-mobile/menu-mobile";
 import { LanguageContext } from "@contexts/tooglerLang/createContextLang";
 import { useTranslation } from "react-i18next";
 import DropdawnMenu from "@components/dropdawn-menu/dropdawn-menu";
-import { div, p } from "motion/react-client";
 // import teste from '../../assets/react.svg' 
 // import brasil from '../../assets/brasil.png' 
 // import eua from '../../assets/eua.png' 
@@ -48,7 +47,7 @@ export const Header = (): ReactElement => {
                 {isMobile ? (
                     <div className="flex justify-between items-center w-full z-2">
                         <DropdawnMenu />
-                        <p>
+                        <p className="text-white text-[20px] font-bold">
                             CarlosHerbertDev
                         </p>
                         <MenuMobile />
@@ -57,7 +56,8 @@ export const Header = (): ReactElement => {
                 
                 <div className="flex justify-between items-center w-full">
                     <div className="flex items-center  gap-[15px]">
-                        <p>CarlosHerbertDev</p>
+                         <p className="text-white text-[20px]">
+                            CarlosHerbertDev</p>
                         <DropdawnMenu />
                     </div>   
                 
