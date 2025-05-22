@@ -56,7 +56,7 @@ export const Header = (): ReactElement => {
                 
                 <div className="flex justify-between items-center w-full">
                     <div className="flex items-center  gap-[15px]">
-                         <p className="text-white text-[20px] bg-secondary p-1 rounded">
+                         <p className="text-white text-[25px] bg-secondary p-1 rounded">
                             CarlosHerbertDev</p>
                         <DropdawnMenu />
                     </div>   
