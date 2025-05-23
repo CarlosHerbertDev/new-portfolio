@@ -47,7 +47,7 @@ export const Header = (): ReactElement => {
                 {isMobile ? (
                     <div className="flex justify-between items-center w-full z-2">
                         <DropdawnMenu />
-                        <p className="text-white text-[20px] font-bold bg-secondary">
+                        <p className="text-white text-[15px] font-bold bg-secondary">
                             CarlosHerbertDev
                         </p>
                         <MenuMobile />
@@ -55,13 +55,17 @@ export const Header = (): ReactElement => {
                 ) : (
                 
                 <div className="flex justify-between items-center w-full">
-                    <div className="flex items-center  gap-[15px]">
-                         <p className="text-white text-[25px] bg-secondary p-1 rounded">
+                    <div className="flex items-center gap-[10px]">
+                         <p className="text-white text-[20px] bg-secondary p-1 rounded">
                             CarlosHerbertDev</p>
                         <DropdawnMenu />
                     </div>   
                 
-                    <ul className="flex justify-center items-center gap-[30px] font-medium text-[15px] uppercase">
+                    <video className="w-[100px] h-[100px] rounded-full fixed z-[-1]" autoPlay loop muted>
+                        <source src="https://www.vecteezy.com/video/10876623-drops-of-rain-with-green-tree-nature-background-romantic-shot-scene-content-colorful-raindrops" type="video/mp4" />
+                    </video>
+
+                    <ul className="flex justify-center items-center gap-[30px] font-medium text-[13px] uppercase">
                         <li>
                             <Link to ={`/`}>Home</Link>
                         </li>
