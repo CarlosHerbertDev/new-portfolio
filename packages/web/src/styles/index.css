@@ -13,7 +13,10 @@
 
 @layer base {
     body {
-      @apply my-0 mx-auto p-4 bg-primary text-tertiary;
+      @apply my-0 mx-auto p-4 text-tertiary;
+      background: linear-gradient(to bottom, #0f0c29,  #302b63) no-repeat;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
   }
 
@@ -23,10 +26,10 @@
     }
 
     .itemdrop {
-      @apply px-3 py-3 cursor-pointer
+      @apply px-1 py-1 cursor-pointer border-1 border-[#00000066]
     }
     .itemdrop:hover {
-      @apply bg-gray-200
+      @apply bg-[#302b63]
     }
   }
   

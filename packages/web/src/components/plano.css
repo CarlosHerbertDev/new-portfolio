@@ -1,45 +1,13 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gradient Animation</title>
-  </head>
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-/* 
-    .gradient {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      width: 100vw;
-
-      background: linear-gradient(45deg, #084177, #687466, #fbc490);
-      background-size: 300% 300%;
-      animation: colors 15s ease infinite;
-    } */
-
-    /* @keyframes colors {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    } */
-
-    body {
+/* .container {
   min-height: 100vh;
   background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f) no-repeat;
   overflow: hidden;
+  position: fixed;
+  
+} */
+
+.container{
+   position: relative;
 }
 
 .stars {
@@ -67,13 +35,14 @@
   position: absolute;
   width: 100px;
   height: 2px;
+  z-index: -1;
   background: linear-gradient(90deg, white, transparent);
   animation: shoot 3s infinite ease-in;
 }
 
 .shooting-star:nth-child(1) {
   top: 20%;
-  left: -100px;
+  left: -10px;
   animation-delay: 0s;
 }
 
@@ -85,12 +54,12 @@
 
 .shooting-star:nth-child(3) {
   top: 50%;
-  left: -100px;
+  left: -100px; 
   animation-delay: 2s;
 }
 
 .teste {
-  opacity: 0.;
+  opacity: 0.2;
 }
 
 @keyframes twinkle {
@@ -106,7 +75,7 @@
 @keyframes shoot {
   0% {
     transform: translateX(0) translateY(0) rotate(25deg);
-    opacity: 1;
+    opacity: 0.2;
   }
   100% {
     transform: translateX(120vw) translateY(50vh) rotate(25deg);
@@ -133,16 +102,3 @@
 
 
 
-
-
-
-  </style>
-  <body class="teste">
-    <div class="stars"></div>
-<div class="shooting-star"></div>
-<div class="shooting-star"></div>
-<div class="shooting-star"></div>
-<div class="shooting-star"></div>
-<div class="shooting-star"></div>
-  </body>
-</html> -->
