@@ -56,6 +56,7 @@
   z-index: -1;
   animation: shoot linear infinite;
   transform: rotate(25deg);
+  opacity: 0;
 }
 
 @keyframes shoot {

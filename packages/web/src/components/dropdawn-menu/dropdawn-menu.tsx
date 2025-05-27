@@ -11,7 +11,7 @@ export default function DropDawnMenu() {
             setDropdownOpen(false);
             setLang(value)
     };
-    const selectedLang = languages.find(lang => lang.name === select)
+    const selectedLang = languages.find(lang => lang.label === select)
 
 
 return (
@@ -19,23 +19,23 @@ return (
         <div className="flex justify-start items-center flex-row gap-[10px]">
                                 <div className="relative w-full inline-block">
                                     <button 
-                                        className={`p-1 w-full cursor-pointer bg-[#302b63] text-[20px] text-white border-1 border-[#302b63] ${isDropdownOpen ? 'rounded-t-sm' : 'rounded-sm'}`}
+                                        className={`p-1 w-full cursor-pointer bg-[#302b63] text-justify text-[15px] text-white border-1 border-[#302b63] ${isDropdownOpen ? 'rounded-t-sm' : 'rounded-sm'}`}
                                         onClick={() => setDropdownOpen(!isDropdownOpen)}>
                                             <div className="flex justify-center items-center gap-[7px]">
-                                                {selectedLang && selectedLang.label}
                                                 {selectedLang && <img src={selectedLang.flag} alt={selectedLang.label} />}
+                                                
                                             </div>
                                                 {isDropdownOpen && (
-                                                <ul className="absolute right-0 left-0 top-full z-1 rounded-b-sm bg-[#00000066] text-white max-w-[80px] overflow-auto">
+                                                <ul className="absolute right-0 left-0 top-full z-1 rounded-b-sm bg-[#00000066] text-white w-[120px]">
                                                     {
                                                         languages.map((lang) => (
                                                             <li 
                                                                 key={lang.name} 
                                                                 className = 'itemdrop'
-                                                                onClick={() => handleChange(lang.name)}>
-                                                                    <div className="flex justify-center items-center gap-[7px]">
-                                                                        {lang.label}
+                                                                onClick={() => handleChange(lang.label)}>
+                                                                    <div className="flex justify-start items-center gap-[7px] text-justify text-[15px] text-white">
                                                                         <img src={lang.flag} alt={lang.label} />
+                                                                        {lang.name}
                                                                     </div>
                                                             </li>
                                                         ))

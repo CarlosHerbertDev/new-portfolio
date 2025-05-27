@@ -4,14 +4,14 @@ import eua  from "@assets/eua.png";
 export const languages = [
 
     {
-        name: 'pt',
+        name: 'Português',
         flag: brasil,
-        label: 'PT'
+        label: 'pt'
     },
     {
-        name: 'en',
+        name: 'Inglês',
         flag: eua,
-        label: 'EN'
+        label: 'en'
     }
 
 ]
