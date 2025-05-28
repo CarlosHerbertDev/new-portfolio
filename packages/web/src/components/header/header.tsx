@@ -60,12 +60,8 @@ export const Header = (): ReactElement => {
                             CarlosHerbertDev</p>
                         <DropdawnMenu />
                     </div>   
-                
-                    <video className="w-[100px] h-[100px] rounded-full fixed z-[-1]" autoPlay loop muted>
-                        <source src="https://www.vecteezy.com/video/10876623-drops-of-rain-with-green-tree-nature-background-romantic-shot-scene-content-colorful-raindrops" type="video/mp4" />
-                    </video>
 
-                    <ul className="flex justify-center items-center gap-[30px] font-medium text-[13px] uppercase">
+                    <ul className="navegation-web">
                         <li>
                             <Link to ={`/`}>Home</Link>
                         </li>

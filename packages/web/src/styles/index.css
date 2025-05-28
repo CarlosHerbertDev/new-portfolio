@@ -31,5 +31,11 @@
     .itemdrop:hover {
       @apply bg-[#302b63]
     }
+    .navegation-web {
+      @apply flex justify-center items-center gap-[30px] text-[13px] uppercase text-[15px]
+    }
+    .navegation-web li:hover {
+      @apply text-[#736eb7] transition-all duration-300 ease-in-out;
+    }
   }
   
