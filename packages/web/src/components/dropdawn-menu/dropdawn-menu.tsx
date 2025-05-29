@@ -2,6 +2,7 @@ import { useContext, useState } from 'react'
 import { LanguageContext } from "@contexts/tooglerLang/createContextLang";
 import { languages } from "../../data/languages";
 import arrow from "@assets/arrow-bottom.png"
+import arrowHover from "@assets/arrow-hover.png"
 
 export default function DropDawnMenu() {
     const [select, setSelect] = useState('pt');
@@ -24,7 +25,7 @@ return (
                                         onClick={() => setDropdownOpen(!isDropdownOpen)}>
                                             <div className="flex justify-center items-center gap-[7px]">
                                                 {selectedLang && <img src={selectedLang.flag} alt={selectedLang.label} />}
-                                                <img src={arrow} alt="arrow-bottom"  className={`w-[10px] h-[10px] ease-in-out duration-200 ${isDropdownOpen? 'rotate-180' : 'rotate-0'}`}/>
+                                                <img src={isDropdownOpen? arrowHover : arrow} alt="arrow-bottom"  className={`w-[10px] h-[10px] ease-in-out duration-200 ${isDropdownOpen? 'rotate-180' : 'rotate-0'}`}/>
                                                 
                                             </div>
                                                 {isDropdownOpen && (
@@ -35,7 +36,7 @@ return (
                                                                 key={lang.name} 
                                                                 className = 'itemdrop'
                                                                 onClick={() => handleChange(lang.label)}>
-                                                                    <div className="ml-[3px] flex justify-start items-center gap-[7px] text-justify text-[15px] text-white">
+                                                                    <div className="ml-[3px] flex justify-start items-center gap-[7px] text-justify text-[15px] ">
                                                                         <img src={lang.flag} alt={lang.label} />
                                                                         {lang.name}
                                                                     </div>
