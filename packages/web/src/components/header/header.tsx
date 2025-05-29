@@ -4,6 +4,7 @@ import MenuMobile from "@components/menu-mobile/menu-mobile";
 import { LanguageContext } from "@contexts/tooglerLang/createContextLang";
 import { useTranslation } from "react-i18next";
 import DropdawnMenu from "@components/dropdawn-menu/dropdawn-menu";
+import AnimatedLetreiro from "@components/animated-letreiro/animated~letreiro";
 // import teste from '../../assets/react.svg' 
 // import brasil from '../../assets/brasil.png' 
 // import eua from '../../assets/eua.png' 
@@ -47,17 +48,25 @@ export const Header = (): ReactElement => {
                 {isMobile ? (
                     <div className="flex justify-between items-center w-full z-2">
                         <DropdawnMenu />
-                        <p className="text-white text-[15px] font-bold bg-secondary">
+                        {/* <p className="text-white text-[15px] font-bold bg-secondary">
                             CarlosHerbertDev
-                        </p>
+                        </p> */}
+                        <AnimatedLetreiro 
+                            text="CarlosHerbertDev"
+                            className="text-textdefault text-[20px] bg-[#00000066] border-1 border-[#302b63] p-1 rounded hover:text-[#e0c97f]"
+                        />
                         <MenuMobile />
                     </div>
                 ) : (
                 
                 <div className="flex justify-between items-center w-full">
                     <div className="flex items-center gap-[10px]">
-                         <p className="text-textdefault text-[20px] bg-[#00000066] border-1 border-[#302b63] p-1 rounded hover:text-[#e0c97f]">
-                            CarlosHerbertDev</p>
+                         {/* <p className="text-textdefault text-[20px] bg-[#00000066] border-1 border-[#302b63] p-1 rounded hover:text-[#e0c97f]">
+                            CarlosHerbertDev</p> */}
+                          <AnimatedLetreiro 
+                            text="CarlosHerbertDev"
+                            className="text-textdefault text-[20px] bg-[#00000066] border-1 border-[#302b63] p-1 rounded hover:text-[#e0c97f]"
+                        />
                         <DropdawnMenu />
                     </div>   
 

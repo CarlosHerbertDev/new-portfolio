@@ -23,3 +23,8 @@ export interface ContextProviderType {
 export interface ContextProps {
   children: React.ReactNode;
 }
+
+export interface AnimatedTextProps {
+  text: string;
+  className?: string;
+}
