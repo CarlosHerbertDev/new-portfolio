@@ -53,7 +53,7 @@ export const Header = (): ReactElement => {
                         </p> */}
                         <AnimatedLetreiro 
                             text="CarlosHerbertDev"
-                            className="text-textdefault text-[20px] bg-[#00000066] border-1 border-[#302b63] p-1 rounded hover:text-[#e0c97f]"
+                            className="text-textdefault text-[20px] bg-[#00000066] border-1 border-[#302b63] p-1 rounded"
                         />
                         <MenuMobile />
                     </div>
@@ -65,7 +65,7 @@ export const Header = (): ReactElement => {
                             CarlosHerbertDev</p> */}
                           <AnimatedLetreiro 
                             text="CarlosHerbertDev"
-                            className="text-textdefault text-[20px] bg-[#00000066] border-1 border-[#302b63] p-1 rounded hover:text-[#e0c97f]"
+                            className="text-textdefault text-[17px] bg-[#00000066] border-1 border-[#302b63] p-1 rounded"
                         />
                         <DropdawnMenu />
                     </div>   
