@@ -5,6 +5,9 @@ import { LanguageContext } from "@contexts/tooglerLang/createContextLang";
 import { useTranslation } from "react-i18next";
 import DropdawnMenu from "@components/dropdawn-menu/dropdawn-menu";
 import AnimatedLetreiro from "@components/animated-letreiro/animated~letreiro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faGithub} from '@fortawesome/free-brands-svg-icons';
+
 // import teste from '../../assets/react.svg' 
 // import brasil from '../../assets/brasil.png' 
 // import eua from '../../assets/eua.png' 
@@ -51,10 +54,12 @@ export const Header = (): ReactElement => {
                         {/* <p className="text-white text-[15px] font-bold bg-secondary">
                             CarlosHerbertDev
                         </p> */}
-                        <AnimatedLetreiro 
+                      <div className="bg-[#00000066] border-1 border-[#302b63] p-1 rounded flex justify-center items-center gap-[5px]">
+                          <AnimatedLetreiro 
                             text="CarlosHerbertDev"
-                            className="text-textdefault text-[20px] bg-[#00000066] border-1 border-[#302b63] p-1 rounded"
-                        />
+                            className="text-textdefault text-[17px]"/>
+                            <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:text-2xl hover:text-texthover"/>                     
+                        </div>
                         <MenuMobile />
                     </div>
                 ) : (
@@ -63,10 +68,12 @@ export const Header = (): ReactElement => {
                     <div className="flex items-center gap-[10px]">
                          {/* <p className="text-textdefault text-[20px] bg-[#00000066] border-1 border-[#302b63] p-1 rounded hover:text-[#e0c97f]">
                             CarlosHerbertDev</p> */}
+                        <div className="bg-[#00000066] border-1 border-[#302b63] p-1 rounded flex justify-center items-center gap-[5px]">
                           <AnimatedLetreiro 
                             text="CarlosHerbertDev"
-                            className="text-textdefault text-[17px] bg-[#00000066] border-1 border-[#302b63] p-1 rounded"
-                        />
+                            className="text-textdefault text-[17px]"/>
+                            <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:text-xl hover:text-texthover"/>                     
+                        </div>
                         <DropdawnMenu />
                     </div>   
 

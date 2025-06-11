@@ -15,7 +15,7 @@
 @layer base {
     body {
       @apply my-0 mx-auto p-4 text-textdefault;
-background: linear-gradient(to bottom, #0f0c29 20%, #302b63 60%) no-repeat;
+background: linear-gradient(to bottom, #0f0c29 ) no-repeat;
 
       min-height: 100vh;
       overflow-x: hidden;
