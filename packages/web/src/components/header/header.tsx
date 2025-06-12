@@ -58,7 +58,7 @@ export const Header = (): ReactElement => {
                           <AnimatedLetreiro 
                             text="CarlosHerbertDev"
                             className="text-textdefault text-[17px]"/>
-                            <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:text-2xl hover:text-texthover"/>                     
+                            <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:translate-y-[-2px] hover:text-xl hover:text-texthover"/>                     
                         </div>
                         <MenuMobile />
                     </div>
@@ -72,7 +72,7 @@ export const Header = (): ReactElement => {
                           <AnimatedLetreiro 
                             text="CarlosHerbertDev"
                             className="text-textdefault text-[17px]"/>
-                            <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:text-xl hover:text-texthover"/>                     
+                            <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:translate-y-[-2px] hover:text-xl hover:text-texthover"/>                     
                         </div>
                         <DropdawnMenu />
                     </div>   

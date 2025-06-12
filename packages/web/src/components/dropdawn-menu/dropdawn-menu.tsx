@@ -19,12 +19,12 @@ export default function DropDawnMenu() {
 return (
     <div>
         <div className="flex justify-start items-center flex-row gap-[10px]">
-                                <div className="relative w-full inline-block">
+                                <div className="relative w-full flex justify-start items-center">
                                     <button 
                                         className={`p-1 w-full cursor-pointer bg-[#00000066] text-justify text-[15px] text-white border-1 border-[#302b63] ${isDropdownOpen ? 'rounded-t-sm' : 'rounded-sm'}`}
                                         onClick={() => setDropdownOpen(!isDropdownOpen)}>
                                             <div className="flex justify-center items-center gap-[7px]">
-                                                {selectedLang && <img src={selectedLang.flag} alt={selectedLang.label} />}
+                                                {selectedLang && <img src={selectedLang.flag} alt={selectedLang.label} className='h-[25px]' />}
                                                 <img src={isDropdownOpen? arrowHover : arrow} alt="arrow-bottom"  className={`w-[10px] h-[10px] ease-in-out duration-200 ${isDropdownOpen? 'rotate-180' : 'rotate-0'}`}/>
                                                 
                                             </div>
