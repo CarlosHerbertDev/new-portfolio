@@ -34,7 +34,7 @@ background: linear-gradient(to bottom, #0f0c29 ) no-repeat;
       @apply bg-primary text-texthover
     }
     .navegation-web {
-      @apply flex justify-center items-center gap-[30px] uppercase text-[15px]
+      @apply flex justify-center items-center gap-[30px] uppercase text-[13px]
     }
     .navegation-web li, .navegation-mobile li {
       @apply transition-all duration-300 ease-out

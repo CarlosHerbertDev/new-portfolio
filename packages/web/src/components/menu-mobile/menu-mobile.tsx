@@ -28,7 +28,7 @@ const MenuMobile = (): ReactElement => {
                 className={`z-1 w-[50%] h-full fixed top-0 right-0 text-white flex justify-center items-start transition-transform duration-300 ease-in-out bg-[#000000e6] ${isOpen ? 'translate-x-[0]' : 'translate-x-[100%]'}`}
               >
                 <ul
-                  className='flex flex-col items-center gap-[40px] my-[150px] uppercase navegation-mobile' 
+                  className='flex flex-col items-center gap-[40px] my-[150px] uppercase navegation-mobile text-[13px]' 
                   onClick={() => setOpen(false)}
                 >
                    <li>
