@@ -31,7 +31,6 @@ export const Header = (): ReactElement => {
 
     return (
 
-
         <header className="container justify-between z-1">
 
                 {isMobile ? (
@@ -40,7 +39,7 @@ export const Header = (): ReactElement => {
                     <div className="bg-terciary border-1 border-secundary p-1 rounded flex justify-center items-center gap-[5px]">
                         <AnimatedLetreiro 
                             text="CarlosHerbertDev"
-                            className="text-textdefault text-[17px]"/>
+                            className="text-base"/>
                             <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:translate-y-[-2px] hover:text-xl hover:text-hover"/>                     
                         </div>
                         <MenuMobile />
@@ -52,8 +51,8 @@ export const Header = (): ReactElement => {
                         <div className="bg-terciary border-1 border-secundary p-1 rounded flex justify-center items-center gap-[5px]">
                         <AnimatedLetreiro 
                             text="CarlosHerbertDev"
-                            className="text-textdefault text-[17px]"/>
-                            <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:translate-y-[-2px] hover:text-xl hover:text-texthover"/>                     
+                            className="text-base"/>
+                            <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:translate-y-[-2px] hover:text-xl hover:text-hover"/>                     
                         </div>
                         <DropdawnMenu />
                     </div>   

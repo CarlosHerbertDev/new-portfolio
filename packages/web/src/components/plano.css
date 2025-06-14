@@ -1,4 +1,4 @@
-/* Plano de fundo ocupa toda a tela, atrás de tudo */
+/* Plano de fundo ocupa toda a tela, atrás de tudo
 .background-container {
   position: fixed;
   top: 0;
@@ -25,18 +25,18 @@
   animation: twinkle 8s infinite linear;
 }
 
-.stars::after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  background: white;
-  box-shadow:
-    8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
-    33vw 15vh 1px white, 41vw 28vh 2px white, 49vw 35vh 1px white,
-    57vw 22vh 2px white, 65vw 42vh 1px white, 73vw 28vh 2px white;
-  animation: twinkle 6s infinite linear reverse;
-}
+  .stars::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: white;
+    box-shadow:
+      8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
+      33vw 15vh 1px white, 41vw 28vh 2px white, 49vw 35vh 1px white,
+      57vw 22vh 2px white, 65vw 42vh 1px white, 73vw 28vh 2px white;
+    animation: twinkle 6s infinite linear reverse;
+  }
 
 @keyframes twinkle {
   0%, 100% {
@@ -47,7 +47,7 @@
   }
 }
 
-/* Estrelas cadentes animadas */
+
 .shooting-star {
   position: absolute;
   width: 120px;
@@ -68,4 +68,4 @@
     transform: translateX(140vw) translateY(60vh) rotate(25deg);
     opacity: 0;
   }
-}
+} */

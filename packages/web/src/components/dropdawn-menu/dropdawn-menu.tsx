@@ -21,7 +21,7 @@ return (
         <div className="flex justify-start items-center flex-row gap-[10px]">
                                 <div className="relative w-full flex justify-start items-center">
                                     <button 
-                                        className={`p-1 w-full cursor-pointer bg-terciary text-justify text-[15px] text-white border-1 border-secundary ${isDropdownOpen ? 'rounded-t-sm' : 'rounded-sm'}`}
+                                        className={`p-1 w-full cursor-pointer bg-terciary text-justify text-base text-white border-1 border-secundary ${isDropdownOpen ? 'rounded-t-sm' : 'rounded-sm'}`}
                                         onClick={() => setDropdownOpen(!isDropdownOpen)}>
                                             <div className="flex justify-center items-center gap-[7px]">
                                                 {selectedLang && <img src={selectedLang.flag} alt={selectedLang.label} className='h-[25px]' />}
@@ -36,7 +36,7 @@ return (
                                                                 key={lang.name} 
                                                                 className = 'itemdrop'
                                                                 onClick={() => handleChange(lang.label)}>
-                                                                    <div className="ml-[3px] flex justify-start items-center gap-[7px] text-justify text-[15px] ">
+                                                                    <div className="ml-[3px] flex justify-start items-center gap-[7px] text-justify text-xs ">
                                                                         <img src={lang.flag} alt={lang.label} />
                                                                         {lang.name}
                                                                     </div>
