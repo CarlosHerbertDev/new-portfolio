@@ -3,22 +3,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #302b63;
-  --color-secondary: #0f0c29;
+  --color-primary: #0f0c29;
+  --color-secundary: #302b63;
   --color-terciary: #00000066;
-  --color-textdefault: #dcdcdc;
-  --color-texthover: #e0c97f;
+  --color-text: #dcdcdc;
+  --color-hover-text: #e0c97f;
   --default-font-family: 'Roboto', sans-serif;
 }
 
 
 @layer base {
     body {
-      @apply my-0 mx-auto p-4 text-textdefault;
-background: linear-gradient(to bottom, #0f0c29 ) no-repeat;
-
-      min-height: 100vh;
-      overflow-x: hidden;
+      @apply bg-primary min-h-screen overflow-x-hidden my-0 mx-auto p-4 text-textdefault;
     }
   }
 

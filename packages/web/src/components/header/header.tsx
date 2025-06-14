@@ -8,25 +8,11 @@ import AnimatedLetreiro from "@components/animated-letreiro/animated~letreiro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
 
-// import teste from '../../assets/react.svg' 
-// import brasil from '../../assets/brasil.png' 
-// import eua from '../../assets/eua.png' 
-
 export const Header = (): ReactElement => {
     
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
     const {lang} = useContext(LanguageContext)
     const { t, i18n: { changeLanguage }} =  useTranslation()
-    // const [select, setSelect] = useState('pt')
-    // const [isDropdownOpen, setDropdownOpen] = useState(false);
-    // const handleChange = (value:string) => {
-    //         setSelect(value);
-    //         setDropdownOpen(false);
-    //         setLang(value)
-    //     };
-    // const selectedLang = languages.find(lang => lang.name === select)
-
-
 
     useEffect(() => {
         const handleResize = () => {
@@ -46,19 +32,16 @@ export const Header = (): ReactElement => {
     return (
 
 
-          <header className="container justify-between z-1">
+        <header className="container justify-between z-1">
 
                 {isMobile ? (
                     <div className="flex justify-between items-center w-full z-2">
                         <DropdawnMenu />
-                        {/* <p className="text-white text-[15px] font-bold bg-secondary">
-                            CarlosHerbertDev
-                        </p> */}
-                      <div className="bg-[#00000066] border-1 border-[#302b63] p-1 rounded flex justify-center items-center gap-[5px]">
-                          <AnimatedLetreiro 
+                    <div className="bg-terciary border-1 border-secundary p-1 rounded flex justify-center items-center gap-[5px]">
+                        <AnimatedLetreiro 
                             text="CarlosHerbertDev"
                             className="text-textdefault text-[17px]"/>
-                            <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:translate-y-[-2px] hover:text-xl hover:text-texthover"/>                     
+                            <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:translate-y-[-2px] hover:text-xl hover:text-hover"/>                     
                         </div>
                         <MenuMobile />
                     </div>
@@ -66,10 +49,8 @@ export const Header = (): ReactElement => {
                 
                 <div className="flex justify-between items-center w-full">
                     <div className="flex items-center gap-[10px]">
-                         {/* <p className="text-textdefault text-[20px] bg-[#00000066] border-1 border-[#302b63] p-1 rounded hover:text-[#e0c97f]">
-                            CarlosHerbertDev</p> */}
-                        <div className="bg-[#00000066] border-1 border-[#302b63] p-1 rounded flex justify-center items-center gap-[5px]">
-                          <AnimatedLetreiro 
+                        <div className="bg-terciary border-1 border-secundary p-1 rounded flex justify-center items-center gap-[5px]">
+                        <AnimatedLetreiro 
                             text="CarlosHerbertDev"
                             className="text-textdefault text-[17px]"/>
                             <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:translate-y-[-2px] hover:text-xl hover:text-texthover"/>                     

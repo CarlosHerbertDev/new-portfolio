@@ -21,7 +21,7 @@ return (
         <div className="flex justify-start items-center flex-row gap-[10px]">
                                 <div className="relative w-full flex justify-start items-center">
                                     <button 
-                                        className={`p-1 w-full cursor-pointer bg-[#00000066] text-justify text-[15px] text-white border-1 border-[#302b63] ${isDropdownOpen ? 'rounded-t-sm' : 'rounded-sm'}`}
+                                        className={`p-1 w-full cursor-pointer bg-terciary text-justify text-[15px] text-white border-1 border-secundary ${isDropdownOpen ? 'rounded-t-sm' : 'rounded-sm'}`}
                                         onClick={() => setDropdownOpen(!isDropdownOpen)}>
                                             <div className="flex justify-center items-center gap-[7px]">
                                                 {selectedLang && <img src={selectedLang.flag} alt={selectedLang.label} className='h-[25px]' />}
@@ -29,7 +29,7 @@ return (
                                                 
                                             </div>
                                                 {isDropdownOpen && (
-                                                <ul className="absolute right-0 left-0 top-full z-1 rounded-b-sm bg-[#00000066] text-white w-[120px]">
+                                                <ul className="absolute right-0 left-0 top-full z-1 rounded-b-sm bg-terciary text-white w-[120px]">
                                                     {
                                                         languages.map((lang) => (
                                                             <li 
