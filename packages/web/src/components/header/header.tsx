@@ -36,24 +36,20 @@ export const Header = (): ReactElement => {
                 {isMobile ? (
                     <div className="flex justify-between items-center w-full z-2">
                         <DropdawnMenu />
-                    <div className="bg-terciary border-1 border-secundary p-1 rounded flex justify-center items-center gap-[5px]">
-                        <AnimatedLetreiro 
-                            text="CarlosHerbertDev"
-                            className="text-base"/>
-                            <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:translate-y-[-2px] hover:text-xl hover:text-hover"/>                     
-                        </div>
+                    <a className="bg-terciary border-1 border-secundary p-1 rounded flex justify-center items-center gap-[5px]" href="https://github.com/CarlosHerbertDev" target="_blank">
+                            <AnimatedLetreiro text="CarlosHerbertDev" className="text-base"/>
+                            <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:translate-y-[-2px] hover:text-xl hover:text-hover cursor-pointer"/>                     
+                        </a>
                         <MenuMobile />
                     </div>
                 ) : (
                 
                 <div className="flex justify-between items-center w-full">
                     <div className="flex items-center gap-[10px]">
-                        <div className="bg-terciary border-1 border-secundary p-1 rounded flex justify-center items-center gap-[5px]">
-                        <AnimatedLetreiro 
-                            text="CarlosHerbertDev"
-                            className="text-base"/>
+                        <a className="bg-terciary border-1 border-secundary p-1 rounded flex justify-center items-center gap-[5px]" href="https://github.com/CarlosHerbertDev" target="_blank">
+                            <AnimatedLetreiro text="CarlosHerbertDev" className="text-base"/>
                             <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:translate-y-[-2px] hover:text-xl hover:text-hover"/>                     
-                        </div>
+                        </a>
                         <DropdawnMenu />
                     </div>   
 
