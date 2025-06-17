@@ -1,24 +1,31 @@
 // import { useContentApi } from "@hooks/useContentApi";
 // import { motion } from "motion/react";
+import GithubChart from "@components/table";
 import { ReactElement } from "react";
-import image from "@assets/perfil.jpg";
-
 export const Home = (): ReactElement => {
 // const { dataAPI } = useContentApi('home')
 
 return(
-        <section className="container flex-col text-center justify-center items-center mt-20">
+        <section className="container flex-col text-center justify-center items-center mt-30 ">
 
-            <div className="w-full flex items-center justify-between">
-                <div className="w-full max-w-1/2 flex flex-col gap-4 items-center justify-center">
-                    <h1 className="text-4xl text-center">Olá! Meu nome é Herbert</h1>
-                    <h2 className="text-center">Desenvolvedor FullSatck</h2>
+            <div className="w-full flex flex-col items-center justify-center mt-10 gap-8">
+
+                <div className="h-full flex flex-col gap-10 mt-20">
+                    <h1 className="text-4xl text-center text-hover">Olá, sou Carlos Herbert e esse é meu portfolio!</h1>
+                    <h2 className="text-3xl">Desenvolvedor Fullstack</h2>
+                    {/* <h3 className="text-center text-2xl">Desenvolvedor FullSatck</h3> */}
                 </div>
-                <div className="w-full max-w-1/2 flex items-center justify-center">
-                    <img src={image} alt="" className="w-[350px] h-[320px] rounded-[50%]"/>
+                <div className="flex w-full items-center justify-between">
+                    <div className="w-150 h-150 rounded-full bg-terciary border-2 border-secundary">
+
+                    </div>
+             <GithubChart />
                 </div>
+                {/* <iframe src="https://ghchart.rshah.org/CarlosHerbertDev" frameborder="0"></iframe> */}
+
             </div>
 
+                
 
             {/* {dataAPI.map((data) => {
                 return (
