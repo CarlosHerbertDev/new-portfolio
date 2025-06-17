@@ -6,24 +6,24 @@ export const Home = (): ReactElement => {
 // const { dataAPI } = useContentApi('home')
 
 return(
-        <section className="container flex-col text-center justify-center items-center mt-30 ">
+        <section className="container flex flex-col text-center justify-center items-center mt-14 gap-10">
 
-            <div className="w-full flex flex-col items-center justify-center mt-10 gap-8">
+            <div className="w-full flex items-center justify-center mt-10 gap-8">
 
-                <div className="h-full flex flex-col gap-10 mt-20">
-                    <h1 className="text-4xl text-center text-hover">Olá, sou Carlos Herbert e esse é meu portfolio!</h1>
-                    <h2 className="text-3xl">Desenvolvedor Fullstack</h2>
-                    {/* <h3 className="text-center text-2xl">Desenvolvedor FullSatck</h3> */}
-                </div>
-                <div className="flex w-full items-center justify-between">
-                    <div className="w-150 h-150 rounded-full bg-terciary border-2 border-secundary">
+                <div className="flex items-center justify-center">
+                    <div className="w-[350px] h-[350px] rounded-full bg-terciary border-2 border-secundary">
 
                     </div>
-             <GithubChart />
+                </div>
+                <div className="h-full flex flex-col mt-10 self-start">
+                    <h1 className="text-3xl text-center text-hover">Olá, seja bem-vindo ao meu portfolio</h1>
+                    <h2 className="text-2xl mt-4">Meu nome é Carlos Herbert</h2>
+                    <h3 className="text-center text-lg mt-2">Desenvolvedor FullSatck</h3>
                 </div>
                 {/* <iframe src="https://ghchart.rshah.org/CarlosHerbertDev" frameborder="0"></iframe> */}
 
             </div>
+             <GithubChart />
 
                 
 
