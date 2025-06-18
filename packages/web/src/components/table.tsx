@@ -1,13 +1,12 @@
-import GitHubCalendar from 'react-github-calendar';
 
-
+  
 export default function GithubChart() {
 
     const username = 'CarlosHerbertDev';
 
   return (
     <section className=" flex flex-col gap-5 bg-terciary text-white p-6 rounded-2xl shadow-xl max-w-5xl mx-auto my-10 border-1 border-secundary">
-      <h2 className="text-2xl text-hover mb-4 text-center">Minha Atividade no GitHub</h2>
+      <h2 className="text-2xl text-hover mb-4 ">Minha Atividade no GitHub</h2>
 
       <div className="flex flex-col lg:flex-row items-center justify-center gap-6">
         {/* Gráfico de contribuições */}

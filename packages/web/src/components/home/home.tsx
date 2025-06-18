@@ -1,6 +1,8 @@
 // import { useContentApi } from "@hooks/useContentApi";
 // import { motion } from "motion/react";
 import GithubChart from "@components/table";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ReactElement } from "react";
 export const Home = (): ReactElement => {
 // const { dataAPI } = useContentApi('home')
@@ -8,22 +10,29 @@ export const Home = (): ReactElement => {
 return(
         <section className="container flex flex-col text-center justify-center items-center mt-14 gap-10">
 
-            <div className="w-full flex items-center justify-center mt-10 gap-8">
-
-                <div className="flex items-center justify-center">
-                    <div className="w-[350px] h-[350px] rounded-full bg-terciary border-2 border-secundary">
-
-                    </div>
-                </div>
-                <div className="h-full flex flex-col mt-10 self-start">
+            <div className="w-full flex items-center justify-between mt-10 gap-8 max-h-[900px] h-full">
+                <div className="h-full flex flex-col self-start items-start">
                     <h1 className="text-3xl text-center text-hover">Olá, seja bem-vindo ao meu portfolio</h1>
                     <h2 className="text-2xl mt-4">Meu nome é Carlos Herbert</h2>
                     <h3 className="text-center text-lg mt-2">Desenvolvedor FullSatck</h3>
+             <GithubChart />
+                </div>
+
+                <div className="flex flex-col self-start gap-15 items-center justify-center h-full">
+                    <div className="w-[350px] h-[350px] rounded-full bg-terciary border-2 border-secundary">
+
+                    </div>
+                    <div className="flex gap-10">
+
+                    <FontAwesomeIcon icon={faInstagram} size="2xl" style={{color: "#ffffff",}} />
+                    <FontAwesomeIcon icon={faInstagram} size="2xl" style={{color: "#ffffff",}} />
+                    <FontAwesomeIcon icon={faInstagram} size="2xl" style={{color: "#ffffff",}} />
+                    <FontAwesomeIcon icon={faInstagram} size="2xl" style={{color: "#ffffff",}} />
+                    </div>
                 </div>
                 {/* <iframe src="https://ghchart.rshah.org/CarlosHerbertDev" frameborder="0"></iframe> */}
 
             </div>
-             <GithubChart />
 
                 
 
