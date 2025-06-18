@@ -23,6 +23,11 @@
       @apply my-0 mx-auto flex justify-center items-center max-w-[1440px] w-full;
     }
 
+
+    .teste {
+      animation: glow 1.5s infinite alternate;
+    }
+
     .itemdrop {
       @apply px-1 py-1 cursor-pointer border-1 border-terciary
     }
@@ -30,7 +35,7 @@
       @apply bg-secundary text-hover
     }
     .navegation-web {
-      @apply flex justify-center items-center gap-[30px] uppercase text-xs
+      @apply flex justify-center items-center gap-[30px] uppercase text-sm
     }
     .navegation-web li, .navegation-mobile li {
       @apply transition-all duration-300 ease-out
@@ -72,6 +77,17 @@
       animation: shoot linear infinite;
     }
 
+    .icons {
+      @apply flex gap-10 text-3xl
+    }
+
+    .icons li {
+      @apply transition-all duration-300 ease-out cursor-pointer;
+      
+    }
+    .icons li:hover {
+      @apply hover:text-hover translate-y-[-2px];
+    }
   }
   
 @keyframes twinkle {
@@ -93,5 +109,14 @@
   transform: translateX(140vw) translateY(60vh) rotate(25deg);
   opacity: 0;
 }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+    }
+    100% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+    }
 }
   
