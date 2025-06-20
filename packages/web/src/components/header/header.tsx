@@ -45,7 +45,7 @@ export const Header = (): ReactElement => {
                 ) : (
                 
                 <div className="flex justify-between items-center w-full">
-                    <div className="flex items-center gap-[10px]">
+                    <div className="flex items-center gap-3">
                         <a className="bg-terciary border-1 border-secundary p-1 rounded flex justify-center items-center gap-[5px]" href="https://github.com/CarlosHerbertDev" target="_blank">
                             <AnimatedLetreiro text="CarlosHerbertDev" className="text-base"/>
                             <FontAwesomeIcon icon={faGithub} className="duration-300 ease-out text-lg hover:translate-y-[-2px] hover:text-xl hover:text-hover"/>                     

@@ -2,6 +2,11 @@
     "translation": {
         "projects": "Projects",
         "curriculum": "Curriculum",
-        "about": "About"
+        "about": "About",
+        "contributions": "Contributions",
+        "languages": "Languages Used",
+        "welcome": "Hello, welcome to my portfolio!",
+        "name": "My name is Carlos Herbert",
+        "work": "FullStack Developer"
     }
 }

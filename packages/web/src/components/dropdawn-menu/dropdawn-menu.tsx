@@ -21,7 +21,7 @@ return (
         <div className="flex justify-start items-center flex-row gap-[10px]">
                                 <div className="relative w-full flex justify-start items-center">
                                     <button 
-                                        className={`p-1 w-full cursor-pointer bg-terciary text-justify text-base text-white border-1 border-secundary ${isDropdownOpen ? 'rounded-t-sm' : 'rounded-sm'}`}
+                                        className={`p-1 w-full cursor-pointer bg-terciary text-justify text-base text-white border-1 border-secundary ${isDropdownOpen ? 'rounded-t-sm' : 'rounded'}`}
                                         onClick={() => setDropdownOpen(!isDropdownOpen)}>
                                             <div className="flex justify-center items-center gap-[7px]">
                                                 {selectedLang && <img src={selectedLang.flag} alt={selectedLang.label} className='h-[25px]' />}

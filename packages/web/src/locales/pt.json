@@ -2,6 +2,11 @@
     "translation": {
         "projects": "Projetos",
         "curriculum": "Curriculo",
-        "about": "Sobre"
+        "about": "Sobre",
+        "contributions" : "Contribuições",
+        "languages": "Linguagens Usadas",
+        "welcome": "Olá, bem-vindo ao meu portfólio!",
+        "name": "Meu nome é Carlos Herbert",
+        "work": "Desenvolvedor FullSatck"
     }
 }
