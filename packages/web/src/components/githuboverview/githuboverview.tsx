@@ -1,19 +1,23 @@
 import { useTranslation } from "react-i18next";
-
+import { motion } from "motion/react";
   
-export default function GithubChart() {
+export default function GitHubOverview() {
 
     const username = 'CarlosHerbertDev';
-     const { t } =  useTranslation()
+    const { t } =  useTranslation()
+    
 
   return (
-    <section className=" flex flex-col gap-5 bg-terciary text-white p-6 rounded-2xl shadow-xl max-w-5xl mx-auto my-10 border-1 border-secundary">
-      <h2 className="text-2xl text-hover mb-4 ">Minha Atividade no GitHub</h2>
+    <motion.div 
+    className=" flex flex-col gap-5 bg-terciary text-white p-6 rounded-2xl shadow-xl max-w-5xl mx-auto my-10 border-1 border-secundary"
+    initial={{ opacity: 0, y: 150 }} 
+    whileInView={{ opacity: 1, y: 0 }} 
+    transition={{ duration: 0.8 }} 
+    viewport={{ once: true }}
+    >
+      <h2 className="text-2xl text-hover mb-4 ">{t("activity")}</h2>
 
       <div className="flex flex-col lg:flex-row items-center justify-center gap-6">
-        {/* Gráfico de contribuições */}
-
-        {/* Estatísticas de repositórios */}
         <div className="flex gap-4 mt-5">
 
           <div className='flex flex-col gap-3'>
@@ -32,10 +36,6 @@ export default function GithubChart() {
           </div>
         </div>
       </div>
-        {/* <div className="bg-black border border-secundary rounded-xl p-4">
-          <h3 className="text-lg mb-2 text-center">Contribuições</h3>
-          <GitHubCalendar username='CarlosHerbertDev'/>
-        </div> */}
-    </section>
+    </motion.div>
   )
 }

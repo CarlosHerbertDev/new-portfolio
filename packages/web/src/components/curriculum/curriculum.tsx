@@ -1,4 +1,4 @@
-import GithubChart from "@components/table";
+import GithubChart from "@components/githuboverview/githuboverview";
 import { ReactElement } from "react";
 
 export const Curriculum = (): ReactElement => {
