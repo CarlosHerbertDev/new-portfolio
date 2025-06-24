@@ -10,10 +10,10 @@ export const Home = (): ReactElement => {
 // const { dataAPI } = useContentApi('home')
 
 return(
-        <section className="container flex flex-col text-center gap-10 items-center justify-center h-screen">
+        <section className="container flex flex-col text-center gap-10 mt-10 max-xl:mt-40">
 
             <div className="w-full flex items-center justify-between mt-10 max-h-[900px] max-xl:flex-col max-xl:gap-10 max-xl:flex max-xl:justify-center max-xl:w-auto">
-                <div className="h-full flex flex-col self-start items-start max-xl:items-center max-xl:justify-center">
+                <div className="h-full flex flex-col self-start items-start max-xl:items-center max-xl:justify-center max-xl:w-full">
                     <motion.h1 
                     className="text-3xl text-center text-hover"
                     initial={{ opacity: 0, x: -150 }} 
