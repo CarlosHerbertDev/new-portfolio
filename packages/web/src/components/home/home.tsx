@@ -5,14 +5,15 @@ import { motion } from "motion/react";
 import { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 export const Home = (): ReactElement => {
+
     const { t } =  useTranslation()
 // const { dataAPI } = useContentApi('home')
 
 return(
-        <section className="container flex flex-col text-center mt-10 gap-10">
+        <section className="container flex flex-col text-center gap-10 items-center justify-center h-screen">
 
-            <div className="w-full flex items-center justify-between mt-10 gap-8 max-h-[900px] h-full">
-                <div className="h-full flex flex-col self-start items-start">
+            <div className="w-full flex items-center justify-between mt-10 max-h-[900px] max-xl:flex-col max-xl:gap-10 max-xl:flex max-xl:justify-center max-xl:w-auto">
+                <div className="h-full flex flex-col self-start items-start max-xl:items-center max-xl:justify-center">
                     <motion.h1 
                     className="text-3xl text-center text-hover"
                     initial={{ opacity: 0, x: -150 }} 
@@ -38,10 +39,12 @@ return(
                     >
                         {t("work")}
                     </motion.h3>
-             <GitHubOverview />
+                    <div className="max-xl:hidden">
+                        <GitHubOverview />
+                    </div>
                 </div>
 
-                <div className="flex flex-col self-start gap-15 items-center justify-center h-full">
+                <div className="flex flex-col self-start gap-15 items-center justify-start max-xl:self-auto">
                     <motion.div
                     className="w-[350px] h-[350px] rounded-full bg-terciary border-2 border-secundary"
                     initial={{ opacity: 0, x: 150 }} 
@@ -95,6 +98,9 @@ return(
                             </a>
                         </motion.li>
                     </ul>
+                    <div className="xl:hidden">
+                    <GitHubOverview />
+                    </div>
                 </div>
             </div>
 
@@ -108,10 +114,10 @@ return(
                             whileInView={{ opacity: 1, x: 0 }} // Torna-se visível e retorna para a posição original
                             transition={{ duration: 1.2 }} // Duração da animação  
                             viewport={{ once: true }}
-                        >
+                            >
                             {data.title}
-
-                        </motion.h1>
+                            
+                            </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, x: -50 }} // Começa invisível e deslocado
                             whileInView={{ opacity: 1, x: 0 }} // Torna-se visível e retorna para a posição original
