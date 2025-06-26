@@ -10,12 +10,12 @@ export const Home = (): ReactElement => {
 // const { dataAPI } = useContentApi('home')
 
 return(
-        <section className="container flex flex-col text-center gap-10 mt-10 max-xl:mt-40">
+        <section className="container flex flex-col text-center gap-10 mt-8 max-sm:mt-5">
 
-            <div className="w-full flex items-center justify-between mt-10 max-h-[900px] max-xl:flex-col max-xl:gap-10 max-xl:flex max-xl:justify-center max-xl:w-auto">
+            <div className="w-full flex items-center justify-between mt-10 max-xl:flex-col max-xl:gap-10 max-xl:flex max-xl:justify-center max-xl:w-auto">
                 <div className="h-full flex flex-col self-start items-start max-xl:items-center max-xl:justify-center max-xl:w-full">
                     <motion.h1 
-                    className="text-3xl text-center text-hover"
+                    className="text-3xl text-center text-hover max-[466px]:text-2xl"
                     initial={{ opacity: 0, x: -150 }} 
                     whileInView={{ opacity: 1, x: 0 }} 
                     transition={{ duration: 0.8 }} 
@@ -23,7 +23,7 @@ return(
                     >
                         {t("welcome")}
                     </motion.h1>
-                    <motion.h2 className="text-2xl mt-4"
+                    <motion.h2 className="text-2xl mt-4  max-[466px]:text-xl"
                     initial={{ opacity: 0, x: -150 }} 
                     whileInView={{ opacity: 1, x: 0 }} 
                     transition={{ duration: 0.7 }} 
@@ -31,7 +31,7 @@ return(
                     >
                         {t("name")}
                     </motion.h2>
-                    <motion.h3 className="text-center text-lg mt-2"
+                    <motion.h3 className="text-center text-lg mt-2  max-[466px]:text-lg"
                     initial={{ opacity: 0, x: -150 }} 
                     whileInView={{ opacity: 1, x: 0 }} 
                     transition={{ duration: 0.6 }} 
@@ -46,7 +46,7 @@ return(
 
                 <div className="flex flex-col self-start gap-15 items-center justify-start max-xl:self-auto">
                     <motion.div
-                    className="w-[350px] h-[350px] rounded-full bg-terciary border-2 border-secundary"
+                    className="w-[350px] h-[350px] rounded-full bg-terciary border-2 border-secundary max-[466px]:h-[300px] max-[466px]:w-[300px]"
                     initial={{ opacity: 0, x: 150 }} 
                     whileInView={{ opacity: 1, x: 0 }} 
                     transition={{ duration: 0.6 }} 
