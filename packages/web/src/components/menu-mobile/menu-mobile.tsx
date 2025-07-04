@@ -19,6 +19,9 @@ const MenuMobile = (): ReactElement => {
     };
   }, [isOpen]);
 
+
+
+  
   return (
         <div>
             <div className='relative flex items-center w-[48px] h-[40px] border-1 border-secundary bg-terciary rounded-sm z-2'>
